@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order Confirm</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="TechWise shop project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/resources/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="/resources/styles/product_styles.css">
+    <link rel="stylesheet" type="text/css" href="/resources/styles/product_responsive.css">
+    <link rel="stylesheet" type="text/css" href="/resources/styles/manage_products.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+
+    <style>
+        .top-buffer{
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="wrapper">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/index">TechWise</a>
+            </div>
+        </div>
+    </nav>
+
+</div>
+
+<!-- Page Content -->
+
+<div class="content">
+    <div class="container">
+        <div class="alert alert-success">
+            <h3 class="text-center">Your Order is Confirmed!!</h3>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-xs-12">
+                <div class="invoice-title">
+                    <h2>Invoice</h2>
+                    <h3 class="pull-right">Order # <span th:text="${orderDetail.id}"></span></h3>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <address>
+                            <strong>Billed To:</strong><br>
+                            <span th:text="${orderDetail.user.firstName}"></span><span th:text="${orderDetail.user.lastName}"></span> <br>
+                            <span th:text="${orderDetail.billing.addressLineOne}"></span><br>
+                            <span th:text="${orderDetail.billing.addressLineTwo}"></span><br>
+                            <span th:text="${orderDetail.billing.city}"></span><span th:text="${orderDetail.billing.postalCode}"></span> <br>
+                            <span th:text="${orderDetail.billing.state}"></span><span th:text="${orderDetail.billing.country}"></span> <br>
+                        </address>
+                    </div>
+                    <div class="col-xs-6 text-right">
+
+                        <address>
+                            <strong>Billed To:</strong><br>
+                            <span th:text="${orderDetail.user.firstName}"></span><span th:text="${orderDetail.user.lastName}"></span> <br>
+                            <span th:text="${orderDetail.shipping.addressLineOne}"></span><br>
+                            <span th:text="${orderDetail.shipping.addressLineTwo}"></span><br>
+                            <span th:text="${orderDetail.shipping.city}"></span><span th:text="${orderDetail.shipping.postalCode}"></span> <br>
+                            <span th:text="${orderDetail.shipping.state}"></span><span th:text="${orderDetail.shipping.country}"></span> <br>
+                        </address>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <address>
+                            <strong>Payment Method:</strong><br>
+                            Card Payment <br>
+                            <span th:text="${orderDetail.user.email}"></span><br>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Order summary</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <td><strong>Item</strong></td>
+                                    <td class="text-center"><strong>Price</strong></td>
+                                    <td class="text-center"><strong>Quantity</strong></td>
+                                    <td class="text-right"><strong>Totals</strong></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+
+                                <th:block th:each="orderItem : ${orderDetail.orderItems}">
+                                    <tr>
+                                        <td><span th:text="${orderItem.product.name}"></span></td>
+                                        <td class="text-center">$ <span th:text="${orderItem.buyingPrice}"></span></td>
+                                        <td class="text-center"><span th:text="${orderItem.productCount}"></span></td>
+                                        <td class="text-right">$<span th:text="${orderItem.total}"></span></td>
+                                    </tr>
+                                </th:block>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="/shop" class="btn btn-lg btn-warning">Continue Shopping</a>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="/resources/js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/resources/plugins/greensock/TweenMax.min.js"></script>
+<script src="/resources/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/resources/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/resources/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/resources/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/resources/plugins/easing/easing.js"></script>
+<!--<script src="/resources/js/product_custom.js"></script>-->
+<script src="/resources/js/product_table.js"></script>
+<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+</body>
+</html>

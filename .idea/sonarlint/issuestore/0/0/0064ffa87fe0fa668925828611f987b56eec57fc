@@ -1,0 +1,17 @@
+
+cjavascript:S2259"ITypeError can be thrown as "placeholder" might be null or undefined here.(Œû³è
+;javascript:S1116"Remove this empty statement.(•‡šâúÿÿÿÿ
+6javascript:S1116"Remove this empty statement.(Ç³ýˆ
+Zjavascript:UnusedVariable"7Remove the declaration of the unused 'header' variable.(æ ŽÝ
+djavascript:UnusedVariable"<Remove the declaration of the unused 'menuContent' variable.(¦¾ÿûÿÿÿÿÿ
+Xjavascript:UnusedVariable"5Remove the declaration of the unused 'menu' variable.(àÀÃ”
+Xjavascript:UnusedVariable"5Remove the declaration of the unused 'menu' variable.(àÀÃ”
+Xjavascript:UnusedVariable"5Remove the declaration of the unused 'menu' variable.(àÀÃ”
+Djavascript:UnusedVariable"!Remove unused function 'httpGet'.(ÌÇå•
+^javascript:UnusedVariable"6Remove the declaration of the unused 'index' variable.(îº¡Ïøÿÿÿÿ
+Sjavascript:S1854"9Remove this useless assignment to local variable "header"(æ ŽÝ
+Wjavascript:S1854"8Remove this useless assignment to local variable "index"(îº¡Ïøÿÿÿÿ
+]javascript:S1854">Remove this useless assignment to local variable "menuContent"(¦¾ÿûÿÿÿÿÿ
+Qjavascript:S1854"7Remove this useless assignment to local variable "menu"(àÀÃ”
+Qjavascript:S1854"7Remove this useless assignment to local variable "menu"(àÀÃ”
+Qjavascript:S1854"7Remove this useless assignment to local variable "menu"(àÀÃ”

@@ -1,0 +1,9 @@
+com/svetikov/ecommerceshop/config/WebAppInitializer.class
+com/svetikov/ecommerceshop/specification/BaseSpecification.class
+com/svetikov/ecommerceshop/specification/ProductListSpecification.class
+com/svetikov/ecommerceshop/config/PersistenceJPAConfig.class
+com/svetikov/ecommerceshop/exception/ProductNotFoundException.class
+com/svetikov/ecommerceshop/util/PagePaginationUtil.class
+com/svetikov/ecommerceshop/controller/JsonDataController.class
+com/svetikov/ecommerceshop/controller/ShopController.class
+com/svetikov/ecommerceshop/util/ProductListRequest.class
