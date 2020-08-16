@@ -1,2 +1,14 @@
 
-dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ξΩ—ώÿÿÿÿ
+{squid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "message".(Θ•ϋ8αίατΌ.
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¤ϊΩ8αίατΌ.
+isquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(΅”Υϊόÿÿÿÿ8αίατΌ.
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(µ³‚8αίατΌ.
+€squid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "message".(µ¨ΧΥωÿÿÿÿ8αίατΌ.
+fsquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ωεΑ΄8αίατΌ.
+fsquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ϋ§8αίατΌ.
+fsquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ΛΦΧª8αίατΌ.
+isquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(―„¬΅ψÿÿÿÿ8αίατΌ.
+rsquid:S1192"QDefine a constant instead of duplicating this literal "redirect:/manage" 5 times.(ΟΜΖ‘ϊÿÿÿÿ8αίατΌ.
+dsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(”Οέ8αίατΌ.
+dsquid:S1192"HDefine a constant instead of duplicating this literal "product" 4 times.(³ΞΪ—8αίατΌ.
+psquid:S1192"ODefine a constant instead of duplicating this literal "manageProducts" 4 times.(‚Ίύÿÿÿÿ8αίατΌ.

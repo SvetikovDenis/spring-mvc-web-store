@@ -1,7 +1,6 @@
 package com.svetikov.ecommerceshop.exception;
 
 
-import java.io.Serializable;
 
 public class ProductNotFoundException extends Exception {
 
